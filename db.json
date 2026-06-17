@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "sdf"
+    },
+     {
+      "id": 2,
+      "productName": "sdf adf"
+    },
+     {
+      "id": 3,
+      "productName": "axfad "
+    },
+     {
+      "id": 4,
+      "productName": "sdadf afd af"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
