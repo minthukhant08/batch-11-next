@@ -1,4 +1,4 @@
-import { withoutAuthInstant as axios } from "@/api";
+import { userClient as axios } from "@/api";
 import {routes} from '@/api/users/routes'
 
 export const userAPI = {
