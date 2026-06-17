@@ -1,6 +1,9 @@
+'use client'
 import { Clock, Heart, ShoppingBag } from "lucide-react";
+import { useCartStore } from "@/store/cart-store";
 
 export default function NavBar(){
+    const { cartItems } = useCartStore()
     return (
         <nav className="sticky top-0 z-45 bg-white/95 backdrop-blur-md border-b border-zinc-150 py-4.5 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -30,28 +33,14 @@ export default function NavBar(){
 
           {/* Cart triggers */}
           <div className="flex items-center gap-3">
-            {/* {activeSection === 'storefront' && (
-              <button
+            <button
                 id="cart-drawer-trigger"
-                onClick={() => setIsCartOpen(true)}
                 className="relative flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-xs font-semibold text-zinc-800 shadow-sm transition hover:bg-zinc-50 hover:border-zinc-300 active:scale-95"
               >
                 <ShoppingBag size={15} />
                 <span className="hidden sm:inline">Bag</span>
-                <AnimatePresence mode="popLayout">
-                  {cartItemsCount > 0 && (
-                    <motion.span
-                      initial={{ scale: 0.6, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0.6, opacity: 0 }}
-                      className="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-zinc-950 text-[10px] font-bold text-white font-mono shadow-md border border-white"
-                    >
-                      {cartItemsCount}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
+                 {cartItems.length}
               </button>
-            )} */}
           </div>
         </div>
       </nav>
