@@ -1,8 +1,7 @@
 
 'use client'
 
-import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 
 type Category = {
     id: number,
@@ -18,12 +17,14 @@ const CATEGORIES: Category[] = [
 
 export default function CategoryTab() {
     const searchParams = useSearchParams()
-    const paramCategory = searchParams.get("category")
+    const router = useRouter()
+    const paramCategory = searchParams.get("category") || 'all'
     console.log(paramCategory)
     return (
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 scrollbar-none bg-white">
             {CATEGORIES.map((cat) => (
                 <button
+                    onClick={() => { router.push("/?category=" + cat.name.toLowerCase())}}
                     key={cat.id}
                     id={`cat-tab-${cat}`}
                     className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold whitespace-nowrap transition-all ${cat.name.toLocaleLowerCase() == paramCategory

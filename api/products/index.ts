@@ -3,5 +3,5 @@ import { routes } from "./routes";
 
 
 export const productsAPI = {
-    all: () => axios.get<Product[]>(routes.resource)
+    all: (queryString?: string) => axios.get<Product[]>(routes.resource + queryString)
 }

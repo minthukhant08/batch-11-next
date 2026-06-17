@@ -10,7 +10,6 @@ instance.interceptors.request.use ((config) => {
 })
 
 instance.interceptors.response.use((response)=> {
-    console.log("respose......", response)
     return response
 }, (error) => {
     console.log("error....", error)
