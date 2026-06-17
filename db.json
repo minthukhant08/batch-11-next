@@ -1,21 +1,157 @@
 {
   "products": [
     {
-      "id": 1,
-      "productName": "sdf"
+      "id": "prod_1",
+      "name": "Vanguard Wireless ANC Headphones",
+      "description": "Immersive soundscapes with industry-leading hybrid active noise cancellation, high-fidelity audio drivers, and a luxurious 45-hour battery life.",
+      "price": 299.0,
+      "rating": 4.8,
+      "reviewsCount": 142,
+      "category": "Audio",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Hybrid Active Noise Cancellation",
+        "45-Hour Battery Life",
+        "High-Res Audio Certified",
+        "Memory Foam Ear Cups"
+      ],
+      "stock": 12
     },
-     {
-      "id": 2,
-      "productName": "sdf adf"
+    {
+      "id": "prod_2",
+      "name": "Apex Mechanical Keyboard",
+      "description": "A minimalist 75% mechanical layout featuring hot-swappable tactile pre-lubed switches, double-shot PBT keycaps, and seamless dual-wireless connectivity.",
+      "price": 165.0,
+      "rating": 4.9,
+      "reviewsCount": 88,
+      "category": "Workspace",
+      "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Hot-swappable Custom Switches",
+        "Double-shot PBT Keycaps",
+        "Bluetooth 5.1 & 2.4Ghz",
+        "Solid Aluminum Frame"
+      ],
+      "stock": 7
     },
-     {
-      "id": 3,
-      "productName": "axfad "
+    {
+      "id": "prod_3",
+      "name": "Nomad Waxed Canvas Backpack",
+      "description": "Weather-resistant, highly durable travel companion with a dedicated 16\" padded laptop sleeve, magnetic Fidlock buckles, and full-access clamshell opening.",
+      "price": 189.0,
+      "rating": 4.7,
+      "reviewsCount": 201,
+      "category": "Lifestyle",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Water-Resistant Waxed Canvas",
+        "Padded 16\" Laptop Sleeve",
+        "Fidlock Magnetic Closures",
+        "Ergonomic Air-Mesh Back panel"
+      ],
+      "stock": 15
     },
-     {
-      "id": 4,
-      "productName": "sdadf afd af"
+    {
+      "id": "prod_4",
+      "name": "Horizon Smart Hybrid Watch",
+      "description": "Elegant analogue watch aesthetics fused with modular fitness sensors, continuous heart rate tracking, smart alerts, and an ultra-low power E-Ink sub-dial.",
+      "price": 240.0,
+      "rating": 4.6,
+      "reviewsCount": 65,
+      "category": "Wellness",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Continuous Heart Rate Tracker",
+        "Sleep Quality Intelligence",
+        "Water Resistant up to 50m",
+        "3-Week Battery Life"
+      ],
+      "stock": 5
+    },
+    {
+      "id": "prod_5",
+      "name": "Verdant Soy Scented Candle",
+      "description": "Slow-burning, hand-poured soy candle infused with native sandalwood, amber, and light citrus, designed to establish a calming and productive mood.",
+      "price": 36.0,
+      "rating": 4.5,
+      "reviewsCount": 114,
+      "category": "Wellness",
+      "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "100% Organic Soy Wax",
+        "Sustainably Sourced Sandalwood",
+        "65-Hour Burn Time",
+        "Recyclable Amber Glass Jar"
+      ],
+      "stock": 24
+    },
+    {
+      "id": "prod_6",
+      "name": "Solis Designer Desk Lamp",
+      "description": "Fully directional workspace illumination with warm-to-cool smart temperature tuning, stepless rotatable dimming, and an integrated wireless charger base.",
+      "price": 110.0,
+      "rating": 4.7,
+      "reviewsCount": 43,
+      "category": "Workspace",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Stepless Dimming & Temp Tuning",
+        "Integrated 15W Qi Charger",
+        "Anti-Glare Eye Protection Led",
+        "Brushed Brass Finishing"
+      ],
+      "stock": 8
+    },
+    {
+      "id": "prod_7",
+      "name": "Elysian Siphon Coffee Brewer",
+      "description": "Perfect vacuum brewing apparatus creating a pristine cup of clean, fully rounded specialty coffee. Includes medical-grade borosilicate glass flasks.",
+      "price": 95.0,
+      "rating": 4.8,
+      "reviewsCount": 52,
+      "category": "Lifestyle",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Borosilicate Glass carafes",
+        "Alcohol Burner Stand Included",
+        "3-Cup Capacity (15oz)",
+        "Pristine Flavour Extraction"
+      ],
+      "stock": 6
+    },
+    {
+      "id": "prod_8",
+      "name": "Aero Dual-Driver Wireless Buds",
+      "description": "Indestructibly built featherlight wireless buds with IPX7 waterproofing, dynamic deep-bass drivers, and comfortable custom-form earmolds for athletes.",
+      "price": 145.0,
+      "rating": 4.6,
+      "reviewsCount": 154,
+      "category": "Audio",
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "Custom Fit Liquid Silicone",
+        "Dual High-Definition Drivers",
+        "IPX7 Swear & Rain proofing",
+        "Intuitive Side Touch Tap gestures"
+      ],
+      "stock": 18
+    },
+    {
+      "id": "prod_9",
+      "name": "Echelon Premium Water Flask",
+      "description": "Double-walled vacuum insulated stainless steel water bottle. Retains ice-cold drinks for 24 hours and hot coffee for 12 hours without external condensation.",
+      "price": 45.0,
+      "rating": 4.9,
+      "reviewsCount": 310,
+      "category": "Wellness",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800",
+      "features": [
+        "18/8 Pro-Grade Stainless Steel",
+        "TempShield Double-Wall Insul",
+        "BPA-Free, Phthalate-Free",
+        "Leakproof Flex Cap Lid"
+      ],
+      "stock": 35
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
