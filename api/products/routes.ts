@@ -1,5 +1,5 @@
 export const routes = {
-    resource: '/prodcuts',
+    resource: '/productss',
     detail: '/products-detail'
 }
 
