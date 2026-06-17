@@ -1,15 +1,13 @@
-import { Product } from "../products/page";
-
+import { productAPI } from "@/api/products";
 
 export default async function About() {
 
  const test = await new Promise((resolve, reject) => {
-   setTimeout(resolve, 3000);
+   setTimeout(resolve, 1000);
  })
 
-
- const res = await fetch("http://localhost:3001/products")
- const data: Product[] = await res.json()
+ const res = await productAPI.all()
+ const data = res.data
   return (
     <div >
       hello

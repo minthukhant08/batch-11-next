@@ -2,25 +2,21 @@
 import { redirect, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from '@/api'
+import { productAPI } from "@/api/products";
 
-export type Product = {
-  id: number,
-  productName: string
-}
 
 export default function Product() {
   const [ text, setText ] = useState<string>("")
   const [proudcts , setProudcts ] = useState<Product[]>([])
 
   const fetchProducts = async () => {
-    const res = await axios.get("/products")
+    const res = await productAPI.all()
     const data = res.data
-    
     setProudcts(data)
   }
 
   const createProudcts = async () => {
-    await axios.post("/products", { name: text})
+    await productAPI.create({ productName: text })
     router.refresh()
   }
 

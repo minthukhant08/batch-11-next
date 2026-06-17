@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3001',
-  headers: { 'X-Custom-Header': 'foobar' },
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+  headers: { 'X-SECRET': 'ASDFADS ASDFA ' },
 });
 
 export default instance
