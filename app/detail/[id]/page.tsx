@@ -11,6 +11,8 @@ export default async function DetailPage({ params }: { params: Promise<DetailPar
     const result = await productsAPI.show(id)
     return <div>
         <BackButton/>
-        <ProductCard product={result.data}/>
+        {
+            result ? <ProductCard product={result.data}/> : "product not found"
+        }
     </div>
 }

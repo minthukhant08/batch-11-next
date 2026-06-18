@@ -9,4 +9,5 @@ interface Product {
   image: string;
   features: string[];
   stock: number;
+  qty: number;
 }
