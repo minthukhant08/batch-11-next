@@ -19,7 +19,6 @@ export default function CategoryTab() {
     const searchParams = useSearchParams()
     const router = useRouter()
     const paramCategory = searchParams.get("category") || 'all'
-    console.log(paramCategory)
     return (
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 scrollbar-none bg-white">
             {CATEGORIES.map((cat) => (

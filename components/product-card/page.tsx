@@ -3,23 +3,29 @@ import React, { useState } from 'react';
 import { Star, ShoppingCart, Eye, Tag, AlertTriangle } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { motion, AnimatePresence } from 'motion/react';
+import { useRouter } from 'next/navigation';
 
 
 
 interface ProductCardProps {
   product: Product;
-  onQuickView?: (product: Product) => void;
-  isAdded: boolean;
   key?: string;
 }
 
 export default function ProductCard({
-  product,
-  onQuickView,
-  isAdded
+  product
 }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const { addToCart } = useCartStore()
+  const { addToCart, setLastAddedItemId, lastAddedItemId } = useCartStore()
+  const router = useRouter()
+
+  const handleAddToCart = () => {
+    addToCart(product); 
+    setLastAddedItemId(product.id)
+    setTimeout(() => {
+      setLastAddedItemId(null)
+    }, 1000)
+  }
 
   return (
     <motion.div
@@ -66,7 +72,7 @@ export default function ProductCard({
               >
                 <button
                   id={`quick-view-btn-${product.id}`}
-                  onClick={() => onQuickView && onQuickView(product)}
+                  onClick={() => router.push("/detail/" + product.id)}
                   className="flex items-center gap-1.5 rounded-xl bg-white px-4.5 py-2.5 text-xs font-semibold text-zinc-900 shadow-lg transform transition active:scale-95 hover:bg-zinc-50"
                 >
                   <Eye size={14} />
@@ -127,14 +133,14 @@ export default function ProductCard({
         ) : (
           <button
             id={`add-to-cart-btn-${product.id}`}
-            onClick={() => addToCart(product)}
+            onClick={handleAddToCart}
             className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-semibold select-none transition-all active:scale-95 duration-200 ${
-              isAdded
+              lastAddedItemId == product.id
                 ? 'bg-emerald-500 text-white shadow-emerald-100'
                 : 'bg-zinc-900 text-white hover:bg-zinc-800 shadow-zinc-200'
             } shadow`}
           >
-            {isAdded ? (
+            {lastAddedItemId == product.id ? (
               <>
                 <motion.span
                   initial={{ scale: 0.8, opacity: 0 }}

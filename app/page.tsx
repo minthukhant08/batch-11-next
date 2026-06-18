@@ -8,7 +8,8 @@ type SearchParams = {
 }
 export default async function HomePage({ searchParams } : { searchParams: Promise<SearchParams>}){
     const { category } = await searchParams
-    const products = await productsAPI.all(category == 'all' ? '' : "?category=" + capitalize(category) )
+    console.log( )
+    const products = await productsAPI.all(category ? (category == 'all' ? '' : "?category=" + capitalize(category)) : "")
     return <div>
        <CategoryTab/>
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6.5 pt-6">
@@ -16,7 +17,6 @@ export default async function HomePage({ searchParams } : { searchParams: Promis
                 products.data.map((p) => <ProductCard 
                     key={p.id}
                     product={p}
-                    isAdded={false}
                 />)
             }
        </div>
