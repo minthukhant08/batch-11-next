@@ -8,6 +8,7 @@ type CartStore = {
     addToCart: (product: Product) => void,
     removeFromCart: (product: Product) => void,
     deleteFromCart: (product: Product) => void,
+    clearCart: () => void,
 }
 
 export const useCartStore = create<CartStore>()(persist((set) => ({
@@ -46,6 +47,9 @@ export const useCartStore = create<CartStore>()(persist((set) => ({
     deleteFromCart: (product: Product) => set((state) => {
         const newProducts = state.cartItems.filter((item) => item.id != product.id)
         return { cartItems: newProducts }
+    }),
+    clearCart: () => set(()=>  {
+        return { cartItems : []}
     })
 }),
     { name: 'cart-store' },

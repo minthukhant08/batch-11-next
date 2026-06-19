@@ -4,7 +4,8 @@ import { Star, ShoppingCart, Eye, Tag, AlertTriangle } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { motion, AnimatePresence } from 'motion/react';
 import { useRouter } from 'next/navigation';
-
+import { toast } from "sonner"
+import { useDialogStore } from '../dialog-test/dialog-store';
 
 
 interface ProductCardProps {
@@ -17,10 +18,12 @@ export default function ProductCard({
 }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const { addToCart, setLastAddedItemId, lastAddedItemId } = useCartStore()
+  const { setOpen, setSelectProduct } = useDialogStore()
   const router = useRouter()
 
   const handleAddToCart = () => {
     addToCart(product); 
+    toast("item added", { position: "top-right" })
     setLastAddedItemId(product.id)
     setTimeout(() => {
       setLastAddedItemId(null)
@@ -72,7 +75,7 @@ export default function ProductCard({
               >
                 <button
                   id={`quick-view-btn-${product.id}`}
-                  onClick={() => router.push("/detail/" + product.id)}
+                  onClick={() => { setSelectProduct(product); setOpen(true) } }
                   className="flex items-center gap-1.5 rounded-xl bg-white px-4.5 py-2.5 text-xs font-semibold text-zinc-900 shadow-lg transform transition active:scale-95 hover:bg-zinc-50"
                 >
                   <Eye size={14} />

@@ -8,7 +8,7 @@ export default function CheckOutForm(){
     return (
         <div>
             {
-                cartItems.map((item) => <CartItem item={item} /> )
+                cartItems.map((item) => <CartItem key={item.id} item={item} /> )
             }
         </div>
     )

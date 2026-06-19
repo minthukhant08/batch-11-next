@@ -4,7 +4,7 @@
       "id": "prod_1",
       "name": "Vanguard Wireless ANC Headphones",
       "description": "Immersive soundscapes with industry-leading hybrid active noise cancellation, high-fidelity audio drivers, and a luxurious 45-hour battery life.",
-      "price": 299.0,
+      "price": 299,
       "rating": 4.8,
       "reviewsCount": 142,
       "category": "Audio",
@@ -21,7 +21,7 @@
       "id": "prod_2",
       "name": "Apex Mechanical Keyboard",
       "description": "A minimalist 75% mechanical layout featuring hot-swappable tactile pre-lubed switches, double-shot PBT keycaps, and seamless dual-wireless connectivity.",
-      "price": 165.0,
+      "price": 165,
       "rating": 4.9,
       "reviewsCount": 88,
       "category": "Workspace",
@@ -38,7 +38,7 @@
       "id": "prod_3",
       "name": "Nomad Waxed Canvas Backpack",
       "description": "Weather-resistant, highly durable travel companion with a dedicated 16\" padded laptop sleeve, magnetic Fidlock buckles, and full-access clamshell opening.",
-      "price": 189.0,
+      "price": 189,
       "rating": 4.7,
       "reviewsCount": 201,
       "category": "Lifestyle",
@@ -55,7 +55,7 @@
       "id": "prod_4",
       "name": "Horizon Smart Hybrid Watch",
       "description": "Elegant analogue watch aesthetics fused with modular fitness sensors, continuous heart rate tracking, smart alerts, and an ultra-low power E-Ink sub-dial.",
-      "price": 240.0,
+      "price": 240,
       "rating": 4.6,
       "reviewsCount": 65,
       "category": "Wellness",
@@ -72,7 +72,7 @@
       "id": "prod_5",
       "name": "Verdant Soy Scented Candle",
       "description": "Slow-burning, hand-poured soy candle infused with native sandalwood, amber, and light citrus, designed to establish a calming and productive mood.",
-      "price": 36.0,
+      "price": 36,
       "rating": 4.5,
       "reviewsCount": 114,
       "category": "Wellness",
@@ -89,7 +89,7 @@
       "id": "prod_6",
       "name": "Solis Designer Desk Lamp",
       "description": "Fully directional workspace illumination with warm-to-cool smart temperature tuning, stepless rotatable dimming, and an integrated wireless charger base.",
-      "price": 110.0,
+      "price": 110,
       "rating": 4.7,
       "reviewsCount": 43,
       "category": "Workspace",
@@ -106,7 +106,7 @@
       "id": "prod_7",
       "name": "Elysian Siphon Coffee Brewer",
       "description": "Perfect vacuum brewing apparatus creating a pristine cup of clean, fully rounded specialty coffee. Includes medical-grade borosilicate glass flasks.",
-      "price": 95.0,
+      "price": 95,
       "rating": 4.8,
       "reviewsCount": 52,
       "category": "Lifestyle",
@@ -123,7 +123,7 @@
       "id": "prod_8",
       "name": "Aero Dual-Driver Wireless Buds",
       "description": "Indestructibly built featherlight wireless buds with IPX7 waterproofing, dynamic deep-bass drivers, and comfortable custom-form earmolds for athletes.",
-      "price": 145.0,
+      "price": 145,
       "rating": 4.6,
       "reviewsCount": 154,
       "category": "Audio",
@@ -140,7 +140,7 @@
       "id": "prod_9",
       "name": "Echelon Premium Water Flask",
       "description": "Double-walled vacuum insulated stainless steel water bottle. Retains ice-cold drinks for 24 hours and hot coffee for 12 hours without external condensation.",
-      "price": 45.0,
+      "price": 45,
       "rating": 4.9,
       "reviewsCount": 310,
       "category": "Wellness",
@@ -153,5 +153,78 @@
       ],
       "stock": 35
     }
-  ]
+  ],
+  "orders": [
+    {
+      "userInfo": {
+        "name": "aafdsf",
+        "email": "asdf@sdfda.com",
+        "address": "asdfadsf",
+        "url": "http://213213123213.com"
+      },
+      "products": [
+        {
+          "id": "prod_1",
+          "qty": 2
+        }
+      ],
+      "id": "vMIAVmdJJso"
+    },
+    {
+      "userInfo": {
+        "name": "asdfaf",
+        "email": "adsf@asdf.com",
+        "address": "adfadf",
+        "url": "http://23.com"
+      },
+      "products": [],
+      "id": "OuDXm5l4_As"
+    },
+    {
+      "userInfo": {
+        "name": "asdfafd",
+        "email": "adsf@asddf.com",
+        "url": "http://2d3.com"
+      },
+      "products": [],
+      "id": "zoQtIFYeFqg"
+    },
+    {
+      "userInfo": {
+        "name": "dsfaf",
+        "email": "asdf@dsfa.com",
+        "address": "asdfadsf"
+      },
+      "products": [],
+      "id": "752X85MumGc"
+    },
+    {
+      "userInfo": {
+        "name": "adfa@asdf",
+        "email": "asdfdas@sadf.com",
+        "address": "asdfasf"
+      },
+      "products": [],
+      "id": "GN7bEt0-eyE"
+    },
+    {
+      "userInfo": {
+        "name": "tttttttt",
+        "email": "dsfa@asdf.com",
+        "address": "adsfadf"
+      },
+      "products": [
+        {
+          "id": "prod_1",
+          "qty": 2
+        },
+        {
+          "id": "prod_2",
+          "qty": 5
+        }
+      ],
+      "id": "jmrPvXQD_no"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
